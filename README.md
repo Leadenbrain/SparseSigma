@@ -7,6 +7,12 @@ In the evaluation of Differential Algebraic Equations (DAEs), one of the first s
 
 I successfully implemented such a technique, and demonstrate, in my code, how this can be applied to handle very large systems with little impact on performance and memory. In my code, the DAE functions are defined as a void function (which is cast into a custom type, SigmaMatrixFCN). This allows a signature matrix to be created as an object, which contains a function to compute and print the matrix.
 
+## Execution:
+
+Compile with g++, make sure to include all source files, preferably run with the -O2 flag.
+Setting the value of Nsparse/Ndense allows demonstration and benchmarking of the molecular diffusion problem and Layne Watson problem.
+Alternatively, ideally any general DAE should be computable provided it follows a structure similar to compDAEmol and compDAELW.
+
 ## Technicals
 
 The code is split into several files:
